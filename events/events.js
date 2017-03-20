@@ -1,0 +1,57 @@
+var Event_Emitter=require('events').EventEmitter
+var life=new Event_Emitter()
+life.setMaxListeners(15)
+//addEventListener 
+function water(who){
+	console.log('给'+who+'倒水');
+}
+life.on('求安慰',water)
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水2')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水3')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水4')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水5')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水6')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水7')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水8')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水9')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水10')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水11')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水12')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水13')
+})
+life.on('求安慰',function(who){
+	console.log('给'+who+'倒水14')
+})
+
+life.on('求溺爱',function(who){
+	console.log('给'+who+'买衣服')
+})
+life.on('求溺爱',function(who){
+	console.log('给'+who+'缴工资')
+})
+//life.removeListener('求安慰',water)
+life.emit('求安慰','汉子')
+debugger;
